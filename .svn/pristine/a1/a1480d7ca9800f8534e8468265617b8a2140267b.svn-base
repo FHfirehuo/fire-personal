@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>私人空间</title>
+<head>
+<meta name="description" content="fire">
+<meta name="author" content="fire">
+<link rel="stylesheet" href="/resources/bootstrap/css/bootstrap.min.css">
+
+<link href="/resources/bootstrap/css/bootstrap-theme.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="/resources/css/style.css">
+
+</head>
+<head>
+
+
+
+
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+
+				<a class="navbar-brand" href="javascript:;">私人空间</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li id="index"><a href="/">首页</a></li>
+					<li id="about"><a href="/include/about.shtml">关于我们</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Dropdown <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Nav header</li>
+							<li><a href="#">Separated link</a></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/backstage/user/home" target="_blank">个人中心</a></li>
+					<li id="tologin"><a href="javascript:;"> 登录 </a></li>
+					<li id="user"><a href="javascript:;"> </a></li>
+					<li id="signout"><a href="javascript:;"> 登出 </a></li>
+
+				</ul>
+			</div>
+
+			<div class="theme-popover">
+				<div class="theme-poptit">
+					<a href="javascript:;" title="关闭" class="close">×</a>
+					<h3>登录</h3>
+				</div>
+				<div class="form-signin">
+
+					<label for="inputEmail" class="sr-only">Email address</label> <input
+						class="ipt" type="text" id="username" name="username" value="fire"
+						placeholder="Username" size="20" /> <label for="inputPassword"
+						class="sr-only">Password</label> <input class="ipt" id="password"
+						name="password" value="openfire" placeholder="Password" size="20" />
+					<div class="checkbox">
+						<label> <input type="checkbox" value="remember-me">
+							Remember me
+						</label>
+					</div>
+					<button id="login" class="btn btn-lg btn-primary btn-block"
+						type="submit">登 录</button>
+				</div>
+
+			</div>
+			<div class="theme-popover-mask"></div>
+
+		</div>
+	</nav>
+
+
+	<script type="text/javascript">
+		var url = window.location.pathname;
+		var active = "index";
+		var activetemp = url.substring(9, url.indexOf("."));
+		if (activetemp.length > 1) {
+			if (!activetemp.indexOf("/")) {
+
+			}
+			active = activetemp;
+		}
+		var dom = document.getElementById(active);
+		dom.className = "active";
+	</script>
+</body>
+</html>

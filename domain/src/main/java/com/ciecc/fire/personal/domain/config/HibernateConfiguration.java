@@ -1,0 +1,46 @@
+package com.ciecc.fire.personal.domain.config;
+
+import java.util.Properties;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.PlatformTransactionManager;
+
+import com.ciecc.fire.personal.domain.config.datasource.DataSourceConfiguration;
+
+@Configuration
+@PropertySource("classpath:jdbc.properties")
+public class HibernateConfiguration {
+	
+	@Autowired
+	private DataSourceConfiguration dataSourceConfiguration;
+	
+	 
+	@Autowired
+	private Environment environment;
+      
+     @Bean
+     public LocalSessionFactoryBean setupSessionFactory() throws Exception {
+    	 
+          LocalSessionFactoryBean localSessionFactory = new LocalSessionFactoryBean();
+          localSessionFactory.setDataSource(dataSourceConfiguration.dataSource());
+          localSessionFactory.setPackagesToScan("com.ciecc.fire.personal.domain");   //等同@ComponentScan("com.ciecc.fire.personal.domain")
+          
+          Properties hibernateProperties = new Properties();
+          hibernateProperties.setProperty("dialect", environment.getProperty("hibernate.dialect"));
+          localSessionFactory.setHibernateProperties(hibernateProperties);
+          return localSessionFactory;
+      }
+      
+//      @Bean
+//      public PlatformTransactionManager transactionManager(DataSource dataSource) throws Exception {
+//          return new DataSourceTransactionManager(dataSource);
+//      }
+
+}

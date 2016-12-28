@@ -1,0 +1,17 @@
+
+#开发环境下数据库连接方式
+develop.driver=com.mysql.jdbc.Driver
+develop.url=jdbc:mysql://localhost:3306/spring_no_xml
+develop.username=root
+develop.password=OpenFire%@61
+
+
+#生产环境下数据库连接方式
+produce.driver=com.mysql.jdbc.Driver
+produce.url=jdbc:mysql://localhost:3306/personal
+produce.username=root
+produce.password=niaige
+
+#方言
+hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+mysql.dialect=org.hibernate.dialect.MySQL5Dialect

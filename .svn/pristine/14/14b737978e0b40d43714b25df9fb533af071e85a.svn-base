@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />  
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<div class="navbar navbar-default navbar-fixed-bottom"
+		role="navigation">
+		<div class="navbar-header">
+			<a href="##" class="navbar-brand">新客网</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="##">固定底部</a></li>
+			<li><a href="##">系列教程</a></li>
+			<li><a href="##">名师介绍</a></li>
+			<li><a href="##">成功案例</a></li>
+			<li><a href="##">关于我们</a></li>
+		</ul>
+	</div>
+</body>
+</html>

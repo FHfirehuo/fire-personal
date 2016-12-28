@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>网站指南</title>
+</head>
+<body>
+	<!--#include virtual="/backstage/cgi/top" -->
+</body>
+</html>
